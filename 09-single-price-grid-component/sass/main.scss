@@ -1,0 +1,128 @@
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--Light-Gray);
+
+    height: 100vh;
+}
+
+.box {
+    max-width: 44rem;
+
+    .header {
+        background: #fff;
+        padding: 3rem 3rem;
+        border-radius: 10px 10px 0px 0px;
+
+        h3 {
+            color: var(--Cyan);
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        h4 {
+            color: var(--Bright-Yellow);
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 0.8rem;
+            color: var(--Grayish-Blue);
+            font-weight: bold;
+        }
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media (max-width: 800px) {
+            grid-template-columns: 1fr;
+        }
+
+        .aside-subs {
+            padding: 3rem;
+            background: var(--Cyan);
+            border-radius: 0px 0px 0px 10px;
+
+            @media (max-width: 800px) {
+                border-radius: 0px;
+            }
+
+
+            h3 {
+                color: #fff;
+                font-size: 1rem;
+                margin: 10px 0;
+            }
+
+            .month {
+                font-size: 2rem;
+                color: #fff;
+                margin: 10px 0;
+
+                span {
+                    font-size: 1rem;
+                    font-weight: 100;
+                }
+            }
+
+            p {
+                color: #fff;
+            }
+
+            .btn {
+                margin-top: 30px;
+                width: 100%;
+                color: #fff;
+                padding: 1rem 0;
+                background: var(--Bright-Yellow);
+                font-size: 1rem;
+                font-weight: bold;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+        }
+
+        .aside-whyus {
+            padding: 3rem;
+            background: #4abebd;
+            border-radius: 0px 0px 10px;
+
+            @media (max-width: 800px) {
+                border-bottom-left-radius: 10px;
+            }
+
+            h3 {
+                color: #fff;
+                margin: 10px 0;
+            }
+
+            p {
+                color: #fff;
+            }
+        }
+    }
+}

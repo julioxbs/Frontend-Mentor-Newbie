@@ -1,0 +1,141 @@
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: var(--Light-Gray);
+  height: 100vh;
+}
+
+.box {
+  max-width: 44rem;
+}
+
+.box .header {
+  background: #fff;
+  padding: 3rem 3rem;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.box .header h3 {
+  color: var(--Cyan);
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.box .header h4 {
+  color: var(--Bright-Yellow);
+  margin: 10px 0;
+}
+
+.box .header p {
+  font-size: 0.8rem;
+  color: var(--Grayish-Blue);
+  font-weight: bold;
+}
+
+.box footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 800px) {
+  .box footer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.box footer .aside-subs {
+  padding: 3rem;
+  background: var(--Cyan);
+  border-radius: 0px 0px 0px 10px;
+}
+
+@media (max-width: 800px) {
+  .box footer .aside-subs {
+    border-radius: 0px;
+  }
+}
+
+.box footer .aside-subs h3 {
+  color: #fff;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.box footer .aside-subs .month {
+  font-size: 2rem;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.box footer .aside-subs .month span {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.box footer .aside-subs p {
+  color: #fff;
+}
+
+.box footer .aside-subs .btn {
+  margin-top: 30px;
+  width: 100%;
+  color: #fff;
+  padding: 1rem 0;
+  background: var(--Bright-Yellow);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.box footer .aside-whyus {
+  padding: 3rem;
+  background: #4abebd;
+  border-radius: 0px 0px 10px;
+}
+
+@media (max-width: 800px) {
+  .box footer .aside-whyus {
+    border-bottom-left-radius: 10px;
+  }
+}
+
+.box footer .aside-whyus h3 {
+  color: #fff;
+  margin: 10px 0;
+}
+
+.box footer .aside-whyus p {
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */

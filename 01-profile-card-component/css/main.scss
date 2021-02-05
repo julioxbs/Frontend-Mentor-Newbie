@@ -1,0 +1,104 @@
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Verydark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+    // ### Neutral
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    perspective: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    padding: 3rem;
+    background: url(/img/bg-pattern-top.svg), url(/img/bg-pattern-bottom.svg), var(--Dark-cyan);
+    background-repeat: no-repeat;
+    background-position: right calc(47vw + 15%) bottom calc(65vh - 15vw), left calc(40vw + 25%) top calc(72vh - 10vw);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 2.25rem;
+}
+
+.container {
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120rem;
+    height: 80rem;
+}
+
+.card {
+    background: #fff;
+    // padding: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    .image {
+        background: #fff;
+        position: relative;
+        text-align: center;
+
+        img {
+            position: absolute;
+            right: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+    }
+
+    .about {
+        text-align: center;
+        margin-top: 5rem;
+
+        .name {
+            font-size: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--Verydark-desaturated-blue);
+        }
+
+        .city {
+            color: var(--Dark-gray);
+            font-size: 14px;
+        }
+
+        span {
+            color: var(--Dark-gray);
+        }
+    }
+
+    .footer-card {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+
+        border-top: 1px solid #ededed;
+
+        .number {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        small {
+            color: var(--Dark-gray);
+        }
+    }
+}

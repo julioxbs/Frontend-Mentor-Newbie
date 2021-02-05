@@ -1,0 +1,334 @@
+:root {
+  --color-very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --color-soft-red: hsl(14, 88%, 65%);
+  --color-soft-violet: hsl(273, 75%, 66%);
+  --color-soft-blue: hsl(240, 73%, 65%);
+  --color-very-dark-greyish-blue: hsl(237, 12%, 33%);
+  --color-dark-greyish-blue: hsl(240, 6%, 50%);
+  --color-light-greyish-blue: hsl(240, 5%, 91%);
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 50%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.5rem;
+}
+
+.card__heading {
+  font-size: 4rem;
+}
+
+body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  padding-top: 18rem;
+  padding-bottom: 8rem;
+  background: -webkit-gradient(linear, right top, left top, from(var(--color-soft-violet)), to(var(--color-soft-blue)));
+  background: linear-gradient(270deg, var(--color-soft-violet), var(--color-soft-blue));
+  background-size: 400% 400%;
+  -webkit-animation: bgGradientGlow 6s ease infinite;
+          animation: bgGradientGlow 6s ease infinite;
+}
+
+@media (min-width: 1000px) {
+  body {
+    padding: 0 8rem;
+  }
+}
+
+.card-cube-wrapper {
+  position: relative;
+}
+
+.cube-img {
+  position: absolute;
+  top: -5.5rem;
+  left: 50%;
+  width: 12rem;
+  height: auto;
+  margin-left: -15.5rem;
+  z-index: 10;
+  -webkit-animation: bob 2s infinite;
+          animation: bob 2s infinite;
+}
+
+@media (min-width: 1000px) {
+  .cube-img {
+    position: absolute;
+    top: 25.75rem;
+    left: -11.5rem;
+    width: auto;
+    height: auto;
+    margin-left: 0;
+  }
+}
+
+.card {
+  background: url(../images/bg-pattern-mobile.svg), #fff;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  overflow: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40rem;
+  border-radius: 3rem;
+  -webkit-box-shadow: 0 5rem 5rem -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 5rem 5rem -10px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 1000px) {
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 110rem;
+    max-width: none;
+    height: 64rem;
+    background: url(../images/bg-pattern-desktop.svg), #fff;
+    background-position: -72rem 68%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+}
+
+.card__img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 30rem;
+  height: auto;
+  margin-top: -13.75rem;
+  z-index: 5;
+  -webkit-animation: fadeInUp 1s;
+          animation: fadeInUp 1s;
+}
+
+@media (min-width: 1000px) {
+  .card__img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: auto;
+    height: auto;
+    margin-top: -1.5rem;
+    margin-left: -10.5rem;
+  }
+}
+
+.card__text-wrapper {
+  padding: 9rem 3rem;
+  padding-bottom: 4rem;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+@media (min-width: 1000px) {
+  .card__text-wrapper {
+    width: 50%;
+    margin-left: auto;
+    padding: 9rem 0;
+    padding-right: 7rem;
+    padding-left: 4.5rem;
+  }
+}
+
+.card__text-wrapper::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.card__heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 1000px) {
+  .card__heading {
+    text-align: start;
+  }
+}
+
+.card hr {
+  border: none;
+  border-top: 1px solid var(--color-light-greyish-blue);
+}
+
+.faq {
+  margin: 2rem 0;
+}
+
+.faq[open] .faq__question {
+  font-weight: 700;
+}
+
+.faq[open] .faq__question::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.faq__question {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-right: 4rem;
+  outline: none;
+  list-style: none;
+  color: var(--color-very-dark-greyish-blue);
+  font-size: 1.625rem;
+  cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+  .faq__question {
+    font-size: 1.75rem;
+  }
+}
+
+.faq__question:hover {
+  color: var(--color-soft-red);
+}
+
+.faq__question::after {
+  content: url(../images/icon-arrow-down.svg);
+  position: absolute;
+  right: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media (min-width: 1000px) {
+  .faq__question::after {
+    right: 1.5rem;
+  }
+}
+
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__answer {
+  color: var(--color-dark-greyish-blue);
+  padding-right: 4rem;
+  line-height: 2rem;
+}
+
+@-webkit-keyframes bob {
+  0% {
+    -webkit-filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes bob {
+  0% {
+    -webkit-filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@-webkit-keyframes bgGradientGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes bgGradientGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    -webkit-transform: translateY(6rem);
+            transform: translateY(6rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    -webkit-transform: translateY(6rem);
+            transform: translateY(6rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
